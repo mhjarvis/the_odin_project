@@ -41,3 +41,40 @@ Adding a string and number will result in a string. JavaScript will try to conve
     var x = new Number(500);
     var y = new Number(500);
     x == y;                                             //false, becuase comparing two objects always is false
+    
+### Strings
+    str.length;                                         //return length of string;
+    str.indexOf("World");                               //returns index of first occurance, -1 if not found
+    str.lastIndexOf("World");                           //returns index of last occurance
+    str.search("locate");                               //search cannot take a second start position argument
+                                                        //indexOf cannot take powerful search values (reg expressions)
+# Extracting String Parts
+    str.slice(start, end);                              //end is not included; if negative, it is counted from the end of str
+                                                        //omiting the 2nd parameter will cut off the rest of the string
+    str.substring(start, end);                          //substring cannot accept negative values
+    str.substr(start, length);                          //second parameter specifies the length of the extracted part
+    
+# Replace String Content
+    str = "Please visit me";                            //replaces first match; is case sensitive
+    let n = str.replace("me", "us");                    //returns Please visit us; returns new string
+    let n = str.replace(/MICROSOFT/i, "Something");     ///replace case insensitive with /i
+    str.replace(/Microsoft/g, "Something");             //replace all matches with /g
+    let n = str.toUpperCase();                          //convert str to upper case
+    let n = str.toLowerCase();                          //convert str to lower case
+    text1.concat(" ", text2);                           //concat two strings
+    
+    str.trim();                                         //removes whitespace from both sides of a string
+# str.padStart(4, 0), str.padEnd(4, 0)
+    let str = "5";
+    str = str.padStart(4, 0);                           //returns 0005
+    str = str.padEnd(4, 0);                             //returns 0006
+    
+    
+
+
+
+
+
+
+
+    
