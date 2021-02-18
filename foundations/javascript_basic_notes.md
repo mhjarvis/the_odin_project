@@ -1,9 +1,43 @@
 ### Variables
+Variables can only contain letters, digits, or the symbols $ and _ . The first digit cannot be a number. Case does matter. Non-latin letters are allowed but not recommended.
+
     let message                                         //declaration
     let user = "j", age = 2;                            //declare multiple variables at once
     
     let user = "j",                                     //declare multiple variables variant
         age = 24,
         message = "H";  
+        
+### Constants
+Constant variables cannot be reassigned. Use uppercase for constants. 
+
+    const PI = 3.14;
+
+### Numbers
+Adding a string and number will result in a string. JavaScript will try to convert strings to numbers in all numeric operations (ex: "100" / "10" = 10 (except for addition). "10" + "20" = 1020. 'NaN means not a legal number (as in 100 / "number"). 
+
+    console.log(0.2 + 0.1)                              //precision is an issue as this will return 0.30000000000000004
+    console.log(0.2 * 10 + 0.1 * 10)                    //will return 0.3
+    isNaN(10);                                          //true
     
+    var x = NaN;
+    var y = "5";
+    var z = x + y;                                      //z will be NaN5
     
+    typeof NaN                                          //return number
+    Infinity                                            //is returned when number is outside the largest possible number
+    -Infinity                                           //division by zero will also result in Infinity
+    
+    var x = 0xFF;                                       //hexideimal; will return 255
+    
+    var n = 32;
+    n.toString(10);                                     //returns 32
+    n.toString(16);                                     //returns 20
+    
+    var y - new Number(123);                            //y defined as an object
+    ==                                                  //checks for equality
+    ===                                                 //equal numbers are not equal; === expects equality in type and value
+    
+    var x = new Number(500);
+    var y = new Number(500);
+    x == y;                                             //false, becuase comparing two objects always is false
