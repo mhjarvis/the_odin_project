@@ -42,7 +42,21 @@ These nodes can be targeted with CSS-style selector and/or relationship properti
     div.style.cssText = 'color: blue; background: white';           //adds several style rules
     div.setAttribute('style', 'color: blue; background: white');    //adds several style rules
     
+##### Editing Attributes
+    div.setAttribute('id', 'theDiv');                               //if id exists, update it to 'theDiv', elsecreate an id
+    div.getAttribut('id');                                          //return the value of specified attribute
+    div.removeAttribute('id');                                      //remove specified attribute
     
+##### Working with Classses
+    div.classList.add('new');                                       //adds class 'new' to your new div
+    div.classList.remove('new');                                    //remove 'new' class from div
+    div.classList.toggle('active');                                 //if div doesn't hve class 'active, add it, or if it has it
+                                                                    //remove it
+##### Adding Text Content
+    div.textContent = 'Hello World!'                                //create a text node containing text
+    
+##### Adding HTML Content
+    div.innerHTML = '<span>Hello World!</span>';                    //render the html inside the div
     
     
     
