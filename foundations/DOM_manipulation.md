@@ -58,6 +58,34 @@ These nodes can be targeted with CSS-style selector and/or relationship properti
 ##### Adding HTML Content
     div.innerHTML = '<span>Hello World!</span>';                    //render the html inside the div
     
+### Events (3 methods)
+##### Method 1
+    <button onclick="alert('Hello World')">Click Me</button>        //not prefered (keep JavaScript out of HTML
+##### Method 2
+    <button id="btn">Click Me</button>                              //html file
+    <const btn = document.querySelector('#btn');                    //JavaScript file
+    btn.onclick = () => alert("Hello World");                       //better, but DOM still can only have 1 'onclick' property
+##### Method 3
+    <button id="btn">Click Me Too</button>                          //html
+    const btn = document.querySelector('#btn');                     //JavaScript
+    btn.addEventListener('click', () => {
+        alert("Hello World");
+    });
+
+##### Use with Named Functions
+    <button onClick="alertFunction()">Click me</button>             //Method 1
+    
+    function alertFunction() {
+        alert("You did it!");
+    }
+        
+    btn.onclick = alertFunction;                                    //Method 2
+    btn.addEventListener('click', alertFunction);                   //Method 3
+    
+    btn.addEventListener('click', function (e) {                    //get more information about an event by passing parameter to
+    console.log(e);                                                 //the function we are calling
+    });
+    
     
     
     
