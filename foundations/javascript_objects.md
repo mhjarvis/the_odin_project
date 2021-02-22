@@ -1,4 +1,5 @@
-# JavaScript Objects    https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Basics
+# JavaScript Objects    
+https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Basics
 Objects are used to store keyed collections of various data and more complex entities. They are created with ```{...}``` and have the option to add properties. Properties are key:value pairs, where the key is a string and the value can be antyhing. 
 
 ##### Create an Empty Object
