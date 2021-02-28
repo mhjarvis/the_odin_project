@@ -1,4 +1,4 @@
-### Refresher
+# Refresher
 ##### Defining an Object
     const myObject = {
       property: 'Value',
@@ -48,15 +48,38 @@
     const player1 = new Player('steve', 'X');
     player1.sayName();                              //steve
     
+# Factory Functions and the Module Pattern
+### Factory Function Introduction
+The factory function pattern is similar to constructors, but instead of using ```new``` to create an object, factory functions simply set up and return the new object when you call the function. 
     
+    const personFactory = (name, age) => {
+      const sayHello = () => console.log('hello');
+      return {name, age, sayHello};
+      };
+      
+    const jeff = personFactory('jeff', 27);                 //create object
+    console.log(jeff.name);                                 //jeff
+    jeff.sayHello();                                        //calls the sayHello() function
     
+This is the same as:
+
+    ---------------------------------------------------------------------------------------
+    const Person = function(name, age) {
+      this.sayHello  = () => console.log('hello');
+      this.name = name;
+      this.age = age;
+    };
     
-    
-    
-    
-    
-    
-    
+    const jeff = new Person('jeff', 27);
+    ---------------------------------------------------------------------------------------
+##### Object Shorthand
+If creating an object where you are referring to a variable that has the exact same name as the object property you are creating, you can condense like so:
+
+    return {name, age, sayHello};
+### Scope and Closure
+Scope refers to where things like variables and functions can be used. 
+
+### Private Variables and Functions
     
     
     
